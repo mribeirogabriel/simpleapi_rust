@@ -20,7 +20,7 @@ async fn manual_hello() -> impl Responder {
 async fn main() -> std::io::Result<()> {
     let port = env::var("PORT").unwrap();
     let port_parsed = port.parse().unwrap();
-    println!("App is running on port 8080");
+    println!("App is running on port {port}");
     HttpServer::new(|| {
         App::new()
             .service(hello)

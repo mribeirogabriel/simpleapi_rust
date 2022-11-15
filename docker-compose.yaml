@@ -1,0 +1,9 @@
+version: '3'
+services:
+  rust-sample-api:
+    build: ./
+    container_name: rust-api
+    restart: always
+    env_file: .env
+    ports:
+      - ${PORT}:${PORT}
